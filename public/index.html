@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study Writer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>Case Study Writer</header>
+
+<div class="workspace">
+
+  <!-- ── Left panel: briefing form ── -->
+  <aside class="panel-left">
+    <div class="panel-left-inner">
+      <h2>Briefing Notes</h2>
+
+      <div class="field">
+        <label for="problem1">Primary business problem</label>
+        <textarea id="problem1" class="medium" placeholder="What was the customer's core challenge before using your product?"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="problem2">Secondary problem / root cause</label>
+        <textarea id="problem2" class="short" placeholder="What was the underlying cause or a compounding issue?"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="solution1">Solution for Problem 1</label>
+        <textarea id="solution1" class="medium" placeholder="Which features or capabilities addressed the primary problem?"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="solution2">Solution for Problem 2</label>
+        <textarea id="solution2" class="short" placeholder="Workflow changes or features that fixed the root cause?"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="kpis">2–3 verified KPIs</label>
+        <textarea id="kpis" class="short" placeholder="e.g. 3× pipeline growth, 40% reduction in CAC, $2M ARR added"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="beforeAfter">Headline KPI — before vs. after</label>
+        <textarea id="beforeAfter" class="short" placeholder="e.g. Pipeline: $1.2M → $3.6M in 90 days"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="conclusion">Revenue motion transformation</label>
+        <textarea id="conclusion" class="tall" placeholder="How has the customer's GTM motion changed since deploying your product?"></textarea>
+      </div>
+    </div>
+
+    <div class="panel-left-footer">
+      <button id="btn-generate">Generate Case Study</button>
+    </div>
+  </aside>
+
+  <!-- ── Right panel: document output ── -->
+  <main class="panel-right">
+    <div class="doc-scroll">
+      <div class="doc-card" id="doc-card">
+        <div class="doc-empty" id="doc-empty">
+          <span class="icon">✦</span>
+          <p>Fill in the briefing notes and click <strong>Generate</strong>.</p>
+        </div>
+        <div id="doc-sections"></div>
+      </div>
+    </div>
+
+    <div id="word-count"></div>
+
+    <div class="feedback-bar">
+      <textarea id="feedback-input" placeholder="Describe what to change — e.g. 'make the opening punchier' or 'add more detail about the ROI timeline'…"></textarea>
+      <button id="btn-correct" disabled>Correct</button>
+    </div>
+  </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
