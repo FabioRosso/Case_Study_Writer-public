@@ -1,15 +1,26 @@
 {
   "name": "case_study_writer",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI agent that turns B2B SaaS briefing notes into polished case studies.",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js",
+    "test": "npm run check"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "ai",
+    "b2b-saas",
+    "case-study",
+    "anthropic",
+    "express"
+  ],
+  "author": "FabioRosso",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.96.0",
     "dotenv": "^17.4.2",

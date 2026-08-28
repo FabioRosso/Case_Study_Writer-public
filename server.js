@@ -11,6 +11,10 @@ app.use(express.static(join(__dirname, 'public')));
 
 const client = new Anthropic();
 
+app.get('/api/health', (_req, res) => {
+  res.json({ status: 'ok' });
+});
+
 const SYSTEM_PROMPT = `You are a senior B2B SaaS case study writer with 15 years of experience in demand generation, revenue marketing, and editorial content. You specialise in writing compelling, humanised case studies that convert readers into pipeline.
 
 Your writing style:
